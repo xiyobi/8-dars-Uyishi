@@ -1,0 +1,24 @@
+from os import system
+system("cls")
+
+file = open("hw.txt",'r')
+natija = file.read().split("\n")
+r_h = {}
+r_h = 0
+l_h = {}
+l_h = 0
+left_hand = ['1','2','3','4','5','q','a','z','w','s','x','e','d','c','r','f','v','t','g','b',' ']
+right_hand = ['6','7','8','9','0','y','h','n','u','j','m','i','k',',','o','l','.','p',';','/',' ']
+count1 = 0
+count2 = 0
+for harf in natija:
+    harf = harf.lower()
+    for j  in harf:
+        for k in j:
+            if k in left_hand:
+                count1 += 1
+            if k in right_hand:
+                count2  += 1
+
+print("O'ng qolda: ",count2)
+print("Chap  qolda: ",count1)
